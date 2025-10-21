@@ -1,0 +1,22 @@
+{
+    "name": "ASP.NET Core with SQL Server",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "inventoryservice",
+    "workspaceFolder": "/src",
+    "features": {
+        "ghcr.io/devcontainers/features/dotnet:1": {
+            "version": "9.0"
+        }
+    },
+    "forwardPorts": [8080, 1433],
+    "postCreateCommand": "dotnet restore",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csharp",
+                "ms-dotnettools.vscode-dotnet-runtime",
+                "ms-mssql.mssql"
+            ]
+        }
+    }
+}
